@@ -8,8 +8,8 @@ function App() {
     <>
     
     <div className='bg-fondo h-screen text-white'>
-    <h1 className=' absolute left-2 font-black text-7xl'>TODO APP</h1>
-      <div className='flex items-center justify-center h-full'>
+    <h1 className=' absolute left-[40%] top-8 font-black text-7xl'>TODO APP</h1>
+      <div className='flex items-center justify-center h-[75%]'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<TasksList/>}/>

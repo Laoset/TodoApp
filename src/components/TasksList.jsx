@@ -16,7 +16,7 @@ function TasksList ()  {
     <div className='w-4/6'>
         <header className='flex justify-between items-center py-4'>
             <h1 className='my-[32px] mx-0 text-3xl font-bold text-gray-200 '>Tareas totales : {tasks.length}</h1>
-            <Link to='/create-task' className='bg-indigo-600 px-2 py-1 rounded-sm text-sm shadow-sm'>
+            <Link to='/create-task' className='bg-indigo-600 px-2 py-1 rounded-md text-lg shadow-sm'>
                 Crear tarea
             </Link>
         </header>

@@ -54,7 +54,7 @@ function TaskForm ()  {
     },[]);
 
   return (
-    <form onSubmit={handleSubmit} className="bg-cajita w-3/4 h-1/4 max-w-lg max-h-lg p-4 rounded-md">
+    <form onSubmit={handleSubmit} className="bg-cajita w-3/4 h-1/3 max-w-lg max-h-lg p-4 rounded-md">
         <label htmlFor="title" className="block text-sm font-bold pb-2">Task:</label>
         <input name='title' value={task.title} onChange={handleChange}type="text" placeholder="title" 
         className="w-full p-2 rounded-md bg-zinc-600 mb-2" 
