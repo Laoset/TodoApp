@@ -28,17 +28,16 @@ const TodoForm = (props) => {
         setInput(evento.target.value)
     }
   return (
-    <form className='todo-form' onSubmit={handleSubmit}>
+    <form  onSubmit={handleSubmit}>
         <input
         type="text" 
         placeholder='Add a Todo'
         value={input}
         name='text'
-        className='todo-input'
         onChange={handleChange}
         ref={inputRef}
         />
-        <button className='todo-button'><HiCheck className='iconOk'/></button>
+        <button ><HiCheck className='iconOk'/></button>
     </form>
   )
 }

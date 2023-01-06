@@ -11,9 +11,8 @@ function TasksList ()  {
    const handleDelete = (id)=>{
     dispatch(deleteTask(id))
    }
-
    return (
-    <div className='w-4/6'>
+    <div className='w-4/6 '>
         <header className='flex justify-between items-center py-4'>
             <h1 className='my-[32px] mx-0 text-3xl font-bold text-gray-200 '>Tareas totales : {tasks.length}</h1>
             <Link to='/create-task' className='bg-indigo-600 px-2 py-1 rounded-md text-lg shadow-sm'>
@@ -21,10 +20,10 @@ function TasksList ()  {
             </Link>
         </header>
 
-        <div className='grid grid-cols-3 h-[10vh] gap-3'>
+        <div className='flex flex-col xl:grid grid-cols-3 h-[50vh] gap-3'>
         {
         tasks.map(task => (
-            <div key={task.id} className="bg-cajita p-4 rounded-md h-full">
+            <div key={task.id} className="bg-cajita p-4 rounded-md W-screen">
                 <header className='flex justify-between'>
                     <h3 className='text-xl font-bold'>{task.title}</h3>
                     <div className='flex gap-x-2'>
@@ -40,3 +39,4 @@ function TasksList ()  {
    )
 }
 export default TasksList
+//grid grid-cols-3

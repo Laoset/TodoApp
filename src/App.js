@@ -5,10 +5,10 @@ import TasksList from './components/TasksList';
 
 function App() {
   return (
-    <>
-    
-    <div className='bg-fondo h-screen text-white'>
-    <h1 className=' absolute left-[40%] top-8 font-black text-7xl'>TODO APP</h1>
+    <div className='max-h-[100vh] bg-fondo h-screen w-screen text-white '>
+      <div className='flex flex-col justify-center align-middle text-center p-1 sm:absolute sm:left-[39%] sm:top-8 md:right-screen left-[30%] '>
+        <h1 className='text-6xl font-black sm:text-7xl'>TODO APP</h1>
+      </div>
       <div className='flex items-center justify-center h-[75%]'>
       <BrowserRouter>
         <Routes>
@@ -19,7 +19,6 @@ function App() {
      </BrowserRouter>
       </div>
     </div>
-    </>
   );
 }
 
