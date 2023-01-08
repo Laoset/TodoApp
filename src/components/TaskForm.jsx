@@ -54,14 +54,28 @@ function TaskForm ()  {
     },[]);
 
   return (
-    <form onSubmit={handleSubmit} className="md:w-screen  bg-cajita w-3/4 h-2/4 max-w-lg max-h-64 p-4 rounded-md">
+    <form onSubmit={handleSubmit} className=" sm:mt-96 md:w-full bg-cajita xl:mt-20 max-w-lg p-4 m-auto rounded-md">
         <label htmlFor="title" className="block text-sm font-bold pb-2">Task:</label>
-        <input name='title' value={task.title} onChange={handleChange}type="text" placeholder="title" 
-        className="w-full p-2 rounded-md bg-zinc-600 mb-2" 
+        <input 
+        required 
+        name='title' 
+        value={task.title} 
+        onChange={handleChange}
+        type="text" 
+        placeholder="title" 
+        className="w-full p-2 rounded-md bg-zinc-600 mb-2"
+        autoFocus 
         />
         <label htmlFor="description" className="block text-sm font-bold pb-2">Description:</label>
-        <textarea onChange={handleChange} name="description" placeholder="description" value={task.description} className="w-full p-2 rounded-md bg-zinc-600 mb-2"></textarea>
-        <button className='bg-indigo-600 px-2 py-1'>Guardar</button>
+        <textarea
+        required 
+        onChange={handleChange} 
+        name="description" 
+        placeholder="description" 
+        value={task.description} 
+        className="overflow-hidden resize-none w-full p-2 rounded-md bg-zinc-600 mb-2">
+        </textarea>
+        <button type="submit" className='bg-indigo-600 px-2 py-1'>Guardar</button>
     </form>
   )
 }

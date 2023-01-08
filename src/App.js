@@ -1,18 +1,20 @@
+// import './App.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import DivisorTask from './components/DivisorTask';
+//COMPONENTES!
 import TaskForm  from './components/TaskForm';
 import TasksList from './components/TasksList';
+import Title from './components/Title';
 
 function App() {
   return (
-    <div className='max-h-[100vh] bg-fondo h-screen w-screen text-white '>
-      <div className='flex flex-col justify-center align-middle text-center p-1 sm:absolute sm:left-[39%] sm:top-8 md:right-screen left-[30%] '>
-        <h1 className='text-6xl font-black sm:text-7xl'>TODO APP</h1>
-      </div>
-      <div className='flex items-center justify-center h-[75%]'>
+    <div className='flex justify-center align-middle bg-fondo min-h-screen h-full text-white '>
+      <div className='container max-w-xl flex flex-col mt-20'>
+      <Title/>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<TasksList/>}/>
+          <Route path='/' element={[<DivisorTask/>, <TasksList/>]}/>
           <Route path='/create-task' element={<TaskForm/>}/>
           <Route path='/edit-task/:id' element={<TaskForm/>}/>
         </Routes>
