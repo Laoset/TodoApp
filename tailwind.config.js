@@ -10,7 +10,9 @@ module.exports = {
         cajita:'linear-gradient(90deg, #283048, #859398)'
       },
       colors:{
-        marca: '#76b852'
+        'marca': '#76b852',
+        'nuevoBoton': '#DD936B',
+        'nuevoBoton2': '#ea7067'
       }
     },
     fontFamily: {

@@ -7,10 +7,13 @@ import { useNavigate, useParams } from "react-router-dom"
 import {v4 as uuid} from "uuid"
 
 function TaskForm ()  {
+    //checkbox
+    // const [status, setStatus] = useState('incomplete');
     //Creo mi estado unico de componente
     const [task, setTask]= useState({
         title: '',
-        description: ''
+        description: '',
+        status: 'incompleto'
     })
     //Con este Hook llamo a una funcion, no leo datos, dispara lo que tenga en Slice!
     const dispatch = useDispatch();
@@ -27,7 +30,7 @@ function TaskForm ()  {
             ...task,
             //Guardare en mi NAME lo que tenga en mi valor osea lo escrito
             [evento.target.name]: evento.target.value
-        })
+        });
     }
     //Esto me guarda lo que tengo en mis input y textare al presionar el boton
     const handleSubmit =(evento)=>{
@@ -35,7 +38,7 @@ function TaskForm ()  {
         evento.preventDefault()
         //Si existe esto, estoy actualizando
         if(params.id){
-            dispatch(updateTask(task))
+            dispatch(updateTask(task));
         }else{
             //Quiero ver la ejecucion de mi addtask
             dispatch(addTask({
@@ -75,6 +78,10 @@ function TaskForm ()  {
         value={task.description} 
         className="overflow-hidden resize-none w-full p-2 rounded-md bg-zinc-600 mb-2">
         </textarea>
+        {/* <select value={task.status} name="status"  onChange={handleChange} className="bg-black" >
+            <option name="status" value="incompleto">Incomplete</option>
+            <option name="status" value="complete">Complete</option>
+        </select> */}
         <button type="submit" className='bg-indigo-600 px-2 py-1'>Guardar</button>
     </form>
   )

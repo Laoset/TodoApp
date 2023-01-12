@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState =[
     {
         id: '1',
-        title: 'Task Test',
+        title: 'Task 1 test',
         description: 'Task 1 description',
-        completed: true
-    }
+        status: 'incompleto'
+    },
 ] 
 
 export const taskSlice = createSlice({
@@ -27,14 +27,14 @@ export const taskSlice = createSlice({
             }
         },
         updateTask: (state, action)=>{
-            const {id, title, description} = action.payload
+            const {id, title, description, status} = action.payload
             const found = state.find(task=> task.id === id)
             if(found){
                 found.title= title
                 found.description = description
+                found.status = status
             }
         }
-
     }
 
 })
